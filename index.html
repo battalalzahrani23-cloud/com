@@ -2,124 +2,54 @@
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
-<title>Roblox Style Page</title>
-
+<title>Form</title>
 <style>
 body{
-  margin:0;
-  font-family:Arial, sans-serif;
-  background:#000;
-  color:white;
-}
-
-/* Top Bar */
-.topbar{
   background:#111;
-  height:50px;
-  display:flex;
-  align-items:center;
-  padding:0 15px;
-}
-
-.logo{
-  font-weight:bold;
-  margin-right:15px;
-}
-
-.menu a{
-  color:white;
-  margin:0 8px;
-  text-decoration:none;
-  font-size:14px;
-}
-
-.search{
-  margin-left:auto;
-}
-
-.search input{
-  padding:5px;
-  border-radius:4px;
-  border:none;
-}
-
-.btn-blue{
-  background:#1f7aff;
-  color:white;
-  padding:6px 12px;
-  border-radius:5px;
-  margin-left:10px;
-  text-decoration:none;
-}
-
-.btn-dark{
-  background:#333;
-  color:white;
-  padding:6px 12px;
-  border-radius:5px;
-  margin-left:8px;
-  text-decoration:none;
-}
-
-/* Login Box */
-.center{
-  height:calc(100vh - 50px);
+  color:#fff;
+  font-family:Arial;
   display:flex;
   justify-content:center;
   align-items:center;
+  height:100vh;
 }
-
-.box{
-  background:#202225;
-  padding:30px;
-  width:340px;
+form{
+  background:#1c1c1c;
+  padding:25px;
   border-radius:10px;
-  text-align:center;
+  width:300px;
 }
-
-.box input, .box button{
+input, textarea, button{
   width:100%;
+  margin-top:10px;
   padding:10px;
-  margin:8px 0;
-  border:none;
   border-radius:5px;
+  border:none;
 }
-
-.box button{
-  background:#00b06f;
-  color:white;
+button{
+  background:#00ff88;
+  font-weight:bold;
   cursor:pointer;
+}
+button:hover{
+  background:#00cc6f;
 }
 </style>
 </head>
 <body>
 
-<div class="topbar">
-  <div class="logo">ROBLOX</div>
+<form action="https://formsubmit.co/YOUREMAIL@gmail.com" method="POST">
 
-  <div class="menu">
-    <a href="#">الرئيسية</a>
-    <a href="#">السوق</a>
-    <a href="#">إنشاء</a>
-    <a href="#">Robux</a>
-  </div>
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
 
-  <div class="search">
-    <input type="text" placeholder="بحث">
-  </div>
+  <h3>إرسال البيانات</h3>
 
-  <a href="#" class="btn-dark">تسجيل الدخول</a>
-  <a href="#" class="btn-blue">تسجيل الدخول</a>
-</div>
+  <input type="text" name="Name" placeholder="اسمك" required>
+  <textarea name="Message" placeholder="اكتب هنا" rows="4" required></textarea>
 
-<div class="center">
-  <div class="box">
-    <h2>تسجيل الدخول</h2>
-    <input type="text" placeholder="اسم المستخدم / الإيميل">
-    <input type="password" placeholder="كلمة المرور">
-    <button>تسجيل الدخول</button>
-  </div>
-</div>
+  <button type="submit">إرسال</button>
+</form>
 
 </body>
 </html>
