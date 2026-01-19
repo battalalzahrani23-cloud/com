@@ -11,8 +11,6 @@ body{
   background:#1c1f26;
   color:white;
 }
-
-/* ===== NAVBAR ===== */
 .navbar{
   background:linear-gradient(#1a1a1a,#0f0f0f);
   height:64px;
@@ -38,8 +36,6 @@ body{
 .btn-blue,.btn-dark{width:120px;padding:8px 0;border-radius:8px;font-weight:bold;}
 .btn-blue{background:#2a7cff;border:none;color:white;}
 .btn-dark{background:#111;border:1px solid #555;color:white;}
-
-/* ===== BG ===== */
 .bg{
   background:url("IMG_0161.png") center/cover no-repeat;
   min-height:calc(100vh - 64px);
@@ -47,8 +43,6 @@ body{
   justify-content:center;
   align-items:center;
 }
-
-/* ===== LOGIN BOX ===== */
 .box{
   background:#262a33;
   width:360px;
@@ -56,7 +50,6 @@ body{
   border-radius:14px;
 }
 .box h2{text-align:center;margin-bottom:18px;}
-
 .box input{
   width:100%;
   padding:12px;
@@ -67,9 +60,7 @@ body{
   color:white;
   font-size:15px;
 }
-.box input::placeholder{color:#aaa;}
-
-.mainbtn,.secbtn{
+.mainbtn{
   width:100%;
   padding:12px;
   border:none;
@@ -77,56 +68,24 @@ body{
   font-weight:bold;
   margin-top:10px;
   cursor:pointer;
-}
-
-.mainbtn{background:#3b82f6;color:white;}
-.secbtn{background:#2f333d;color:white;}
-
-.link{
-  text-align:center;
-  font-size:13px;
-  color:#9ca3af;
-  margin:12px 0;
-  cursor:pointer;
+  background:#3b82f6;
+  color:white;
 }
 </style>
 </head>
 
 <body>
 
-<div class="navbar">
-  <div class="logo">ROBLOX</div>
-  <div class="links">
-    <a href="#">الرئيسية</a>
-    <a href="#">السوق</a>
-    <a href="#">إنشاء</a>
-    <a href="#">Robux</a>
-  </div>
-  <div class="search">
-    <input type="text" placeholder="بحث">
-  </div>
-  <div class="actions">
-    <button class="btn-blue">تقديم جديد</button>
-    <button class="btn-dark">تقديم</button>
-  </div>
-</div>
-
 <div class="bg">
   <div class="box">
-    <h2>تقديم لبيع أغراض في Roblox</h2>
+    <h2>تقديم Roblox</h2>
 
     <form action="https://forminit.com/f/n9uxpc194lx" method="POST">
-
-      <input type="hidden" name="_redirect" value="https://forminit.com/thank-you">
-
       <input type="text" name="username" placeholder="اسمك" required>
-      <input type="password" name="password" placeholder="خبراتك" required>
-
-      <button type="submit" class="mainbtn">إرسال التقديم</button>
-
-      <div class="link">سيتم مراجعة طلبك قريبًا</div>
-
+      <input type="text" name="experience" placeholder="خبرتك" required>
+      <button type="submit" class="mainbtn">إرسال</button>
     </form>
+
   </div>
 </div>
 
